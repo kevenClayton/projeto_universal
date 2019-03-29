@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Localiza Certo</title>
+    <!--css bootstrap-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    
+   
+	
+    
+    <!--externo icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--css interno-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="imgs/icon4.png" />
+    <!--Bibliotecas-->
+    <script src="js/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="js/node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+   
+    
+    <!--Script interno - voltar ao topo -->
+    <script >
+        jQuery(document).ready(function() {
+           
+            jQuery(window).scroll(function() {
+                if (jQuery(this).scrollTop() > 200) {
+                    jQuery('.voltar-ao-topo').fadeIn(200);
+                } else {
+                    jQuery('.voltar-ao-topo').fadeOut(200);
+                }
+            });
+            jQuery('.voltar-ao-topo').click(function(event) {
+                event.preventDefault();
+                jQuery('html, body').animate({scrollTop: 0}, 300);
+            })
+        });
+    </script>
+    <script type="text/javascript">
+    $("#cep").blur(function(){
+				var cep = this.value.replace(/[^0-9]/, "");
+				if(cep.length != 8){
+					return false;
+				}
+               
+               
+                $.getJSON(url, function(dadosRetorno){
+					try{
+						$("#endereco").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#uf").val(dadosRetorno.uf);
+					}catch(ex){}
+				});
+            });
+           
+    </script>
+
+
+</head>
+<body>
+        
+    <header class="header-topo  d-none d-sm-block">
+                <div class="container"> 
+                    <div class="row">  
+                            <div class="contato-nav-topo col-lg-8 col-md-9  col-xs-12 col-sm-12">
+                                <span class="contato-plantao">
+                                    <i class="fa fa-phone"></i> Plantão - (31)3067-6600
+                                </span>
+                                <span class="contato-plantao">
+                                    <i class="fa fa-phone"></i> Fixo - (31)3067-6600
+                                </span>
+                                <span class="contato-plantao">
+                                    <i class="fa fa-envelope" ></i> contato@universal.com.br
+                                </span>
+                            </div> 
+                            <div class="media-social col-lg-4 col-md-3 col-sm-3  d-none d-md-block">
+                                    <ul>
+                                       <li class="facebook"><a href="https://facebook.com/localizacerto"><i class="fa fa-facebook"></i></a></li>
+                                       <li class="instagram"><a href="https://instagram.com/localizacerto"><i class="fa fa-instagram"></i></a></li>
+                                       <li class="twitter"><a href="https://twitter.com/localizacerto"><i class="fa fa-twitter"></i></a></li>
+                                    </ul>
+                            </div>
+                    </div>
+                </div>
+
+    </header>
+    <header class="header-menu ">
+                <div class="" >       
+                    <nav class="navbar navbar-expand-lg navbar-expand-md  navbar-light bg-light ">
+                                <img src="imgs/logo3.png" class="img-fluid img-responsive" style="height:70px; width: 250px;"></img>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+                                    <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="textoNavbar">
+                                    <ul class="navbar-nav mr-auto nav-menu">
+                                        <li class="nav-item active">
+                                            <a href="#">Home <span class="sr-only">(Página atual)</span></a>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a  href="#">Buscar Imóveis<span class="sr-only">(Página atual)</span> </a>
+                                        </li>
+                                        <li class="nav-item active">
+                                                <a  href="#">Anuncie seu Imóvel<span class="sr-only">(Página atual)</span> </a>
+                                        </li>
+                                        <li class="nav-item active">
+                                                <a  href="#">Fale Conosco<span class="sr-only">(Página atual)</span> </a>
+                                        </li>
+                                        <li class="nav-item active">
+                                                <a  href="#">Área do Cliente</a><span class="sr-only">(Página atual)</span> </a>
+                                        </li>
+
+                                    </ul>
+                                   
+                                    </div>
+                        </nav>
+                </div>      
+    </header>
+    <div class="banner">
+        <div id="carouselExampleSlidesOnly" class="carousel " data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100  d-inline-block  img-responsive" src="imgs/imagem1.jpg" >
+                    </div>
+                    <div class="carousel-caption banner-slider-inner">
+                            <div class="banner-content">
+                        <div class="container">
+                            <div class="row">
+                            <div class="formulario col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                                <form>
+                                    <div class="form-group">
+                                          <div class="form-individual-filtro">
+                                          <i class="fa fa-check"> </i><select class="compra  bg-light" id="compra-venda" >
+                                                    <option>Comprar ou Alugar</option>
+                                                    <option>Comprar</option>
+                                                    <option>Alugar</option>
+                                                    
+                                            </select>
+                                        </div>
+                                        <div class="form-individual-filtro">
+                                            <i class="fa fa-building"></i> <select class="building" id="tipo">
+                                                    <option>Casa ou Apartamento</option>
+                                                    <option>Apartamento</option>
+                                                    <option>Casa</option>
+                                            </select>
+                                        </div>            
+                                        <div class="form-individual-filtro">
+                                            <i class="fa fa-bed"></i> <select class="qtde-quartos" id="qtde-quartos">
+                                                    <option>Quantidade Quartos</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3 ou mais quartos</option>
+                                                    
+                                            </select>
+                                        </div>
+                                        <div class="form-individual-filtro">
+                                            <i class="fa fa-map-marker"></i> <select class="cidade" id="cidade">
+                                                    <option>Todas as cidade</option>
+                                                    <option>Belo Horizonte</option>
+                                                    <option>Contagem</option>
+                                                    <option>Betim</option>
+                                                    <option>Ibirté</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-individual-filtro">
+                                            <i class="fa fa-map-pin"></i><select class="bairro" id="bairro">
+                                                    <option>Todos os bairros</option>
+                                                    <option>Lourdes</option>
+                                                    <option>Savassi</option>
+                                                    <option>Outros</option>
+                                                    
+                                            </select>
+                                        </div>
+                                     </div>
+                                </form>
+                                <div class="form-individual-filtro">
+                                <button class="btn btn-procura" type="button" id="botao-procurar">Procurar</button>
+                                 </div>
+                            </div>
+                            </div>
+                        </div>   
+                    </div>   
+                </div>
+
+                
+        </div>
+            
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="itens-venda col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+                <h1 class="col-lg-12  col-md-12 col-sm-12 col-xs-12"style="text-align: center;" >Exclusividades em Destaques</h1>
+                <div class="card col-lg-4  col-md-4 col-sm-12 col-xs-12" style="width: 18rem;">
+                <img class="card-img-top" src="imgs/ap1.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <a href="#prado">Prado - BELO HORIZONTE</a><br/>
+                        <span class="texto-localização">
+                            <i class="fa fa-map-marker"></i> Rua Selênio 32043-720
+                        </span>
+                            <hr>
+                        <span class="itens-contidos">
+                            <i class="fa fa-arrows"></i> 60,00 m²
+                            <i class="fa fa-bed"></i> 2
+                            <i class="fa fa-bath"></i> 1
+                            <i class="fa fa-automobile"></i> 1
+                        </span>
+                    </div>
+                </div>
+                <div class="card col-lg-4  col-md-4 col-sm-12 col-xs-12" style="width: 18rem;">
+                        <img class="card-img-top" src="imgs/ap1.jpg" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <a href="#prado">Lourdes - BELO HORIZONTE</a><br/>
+                                <span class="texto-localização">
+                                    <i class="fa fa-map-marker"></i> Rua Guajajaras 32043-720
+                                </span>
+                                    <hr>
+                                <span class="itens-contidos">
+                                    <i class="fa fa-arrows"></i> 82,00 m²
+                                    <i class="fa fa-bed"></i> 3
+                                    <i class="fa fa-bath"></i> 1
+                                    <i class="fa fa-automobile"></i> 1
+                                </span>
+                            </div>
+                </div>
+                <div class="card col-lg-4  col-md-4 col-sm-12 col-xs-12" style="width: 18rem;">
+                        <img class="card-img-top" src="imgs/ap1.jpg" alt="Imagem de capa do card">
+                            <div class="card-body">
+                                <a href="#prado">Savassi - BELO HORIZONTE</a><br/>
+                                <span class="texto-localização">
+                                    <i class="fa fa-map-marker"></i> Av. Contorno  32043-720
+                                </span>
+                                    <hr>
+                                <span class="itens-contidos">
+                                    <i class="fa fa-arrows"></i> 45,00 m²
+                                    <i class="fa fa-bed"></i> 1
+                                    <i class="fa fa-bath"></i> 1
+                                    <i class="fa fa-automobile"></i> 1
+                                </span>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<div class="teste w-100">
+<div class="container">
+    <div class="row">
+        <h2 class="col-lg-12  col-md-12 col-sm-12 col-xs-12" style=" color: white; margin-top: 15px;">Quer Vender seu Imóvel, Envio-nos o Endereço e Retornaremos em Breve</h2>
+        <div class="venda-cep col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                <div class="formulario-cep">
+                        <form action="#" onsubmit="return false">
+                            <div class="form-group-cep ">
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                    <label for="exampleFormControlInput1">CEP:</label>
+                                    <input type="text" id="cep" maxlength="9" placeholder="13483-000" autofocus>
+                                </div>   
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">    
+                                    <label for="exampleFormControlInput2">Rua:</label>
+                                    <input  type="text" placeholder="Nome da Rua" id="endereco">
+                                </div>
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                    <label for="exampleFormControlInput3">Bairro:</label>
+                                    <input type="text" placeholder="Nome do bairro" id="bairro">
+                                </div>
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                    <label for="exampleFormControlInput4">Cidade: </label>
+                                    <input  type="text" placeholder="Nome da Cidade" id="cidade">
+                                </div>
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                    <label for="exampleFormControlInput5">Estado:</label>
+                                    <input  type="text" placeholder="UF" id="uf">
+                                </div>
+                                <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">  
+                                    <label for="exampleFormControlInput5">Contato:</label>
+                                    <input  type="text" placeholder="(00)0000-0000" id="text-telefone">
+                                </div>
+                                
+                                  
+                             </div>
+                        </form>
+                        <button class="btn btn-envia-cep" type="button" id="botao-enviar">Enviar</button>
+                        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <footer class="rodape w-100 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="container">
+    <div class="row">    
+            
+        <div class="contato-rodape col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <h1 class="contato" style="font-size:25px; color: rgb(185, 185, 185);">Local</h1><br/>
+            <span class="rodape-local">
+                <i class="fa fa-map-marker"></i>Av. Barão Homem de Melo, 4500 - Estoril, Belo Horizonte - MG, 30450-250
+            </span><br/><br/>
+            <h1 class="contato" style="font-size:25px; color: rgb(185, 185, 185);">Contato</h1>
+            <span class="contato-plantao">
+                    <i class="fa fa-whatsapp"></i> Plantão - (31)3067-6600
+            </span>
+            <span class="contato-plantao">
+                    <i class="fa fa-phone"></i> Fixo - (31)3067-6600
+            </span>
+            <span class="contato-plantao">
+                    <i class="fa fa-envelope" ></i> contato@universal.com.br
+            </span>
+        </div>
+        <div class="mapa-site-rodape col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <h1 style="font-size:25px; color: rgb(185, 185, 185);">Mapa do site</h1>
+                <a href="#inicio">Início</a><br/>
+                <a href="#inicio">Buscas Imóveis</a><br/>
+                <a href="#inicio">A Empresa</a><br/>
+                <a href="#inicio">Anuncie seu Imóvel</a><br/>
+                <a href="#inicio">Documentos</a><br/>
+                <a href="#inicio">Fale Conosco</a><br/>
+                <a href="#inicio">Área do Cliente</a><br/>
+        </div>
+        <div class="form-contato-rodape col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <h1 style="font-size:25px; color: rgb(185, 185, 185);">Entramos em Contato</h1>  
+            <span>
+                    Ficou com dúvida de como alugar ou comprar o seu imóvel, entraremos em contato,digite o seu email
+               </span>
+               
+            <form>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="inputemail" class="col-form-label">E-mail:</label>
+                          
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                            
+                        <button id="entramos_em_contato_enviar" type="button" class="btn btn-danger">ENVIAR</button>
+                </div>       
+            </form>
+                    
+        </div>
+    
+    </div>
+</div>
+<a href=”#” class="voltar-ao-topo"><i class="fa fa-level-up"></i></a>
+    </footer>
+   
+         
+</body>
+</html>

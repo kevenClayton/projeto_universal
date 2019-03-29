@@ -1,0 +1,318 @@
+.header-topo{
+    background-color: rgb(20, 20, 20);
+    height: 40px;
+    
+}
+
+
+
+.contato-plantao{
+    float:left;
+    padding-left: 15px;
+    font-weight: bold;
+    color: gray;
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+
+.media-social a{
+    padding: 5px;
+    float: right;
+    color: gray;
+    
+    
+}
+.facebook a:hover{
+    color: #3b5998;
+}
+.instagram a:hover{
+    color: #bc2a8d;
+   
+}
+.twitter a:hover{
+    color: #1dcaff;
+}
+ul{
+   list-style-type:none;
+}
+.navbar{
+    width: 100%;
+    
+}
+
+.nav-menu a, li{
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 15px;
+    font-weight: bold;
+    
+}
+.nav-menu li a:visited{
+    color: #4a4747;
+    text-decoration: none;
+    
+}
+.nav-menu  li a:hover{
+    color: #228b22;
+    text-decoration: overline; 
+    
+    
+}
+.nav-menu  li a:active{
+    color: #228b22;
+    text-decoration: none; 
+    
+}
+.navbar-toggler button {
+    color: #228b22
+}
+
+.itens-venda{
+    height: 380px;
+    width: 100%;
+    
+}
+.rodape{
+    background-color: rgb(20, 20, 20);
+    float:left;
+    padding-left: 15px;
+    font-weight: bold;
+    color: gray;
+    font-size: 12px;
+    padding-top: 8px;
+}
+.contato-rodape{
+    width: 300px;
+    margin-top: 100px;
+    float: left;
+    
+    
+    
+}
+.contato-rodape span{
+    padding-top: 20px;
+}
+.rodape-local{
+    padding-left: 5px;
+}
+.contato-rodape i{
+    padding-left: 15px;
+    margin: 5px;
+}
+.mapa-site-rodape{
+    width: 300px;
+    margin-top: 100px; 
+    float: left;
+    
+}
+.mapa-site-rodape a{
+    color: gray;
+    padding: 10px;
+    
+}
+.mapa-site-rodape a:visited{
+    color: gray;
+    
+}
+.mapa-site-rodape a:hover{
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
+.form-contato-rodape{
+    width: 300px;
+    float: left;
+    margin-top: 100px;
+    background-color: rgb(22, 22, 22);
+    padding: 15px;
+}
+.form-group{
+    padding: 10px;
+}
+.form-contato-rodape span{
+    padding-top: 12px;
+    margin-top: 20px;
+}
+.form-contato-rodape button{
+    background-color: #228b22;
+    height: 40px;
+    border: #228b22;
+    margin-top: 10px;
+
+ 
+}
+.form-contato-rodape button:hover{
+    background-color: #186418;
+    height: 40px;
+    border: #186418;
+
+}
+.form-contato-rodape button:active{
+    background-color: #186418;
+    border: #186418;
+
+}
+.itens-venda{
+    margin-bottom: 100px;
+    height: auto;
+    margin-top: 50px;
+
+}
+.card{
+    float:  left;
+    margin: 25px;
+}
+
+.itens-venda a {
+    color: #228b22;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+.itens-venda span{
+    color: rgb(41, 41, 41);
+}
+.itens-contidos i{
+    color: #228b22;
+    padding-right: 1px;
+    padding-left: 3px;
+    
+}
+.formulario{
+    background-color:rgba(219, 219, 219, 0.95);
+    padding: 5px;
+    height: auto;
+
+    
+    
+}
+.form-group select{
+    height: 40px;
+    width: 200px;
+    margin: 3px;
+    
+  
+    
+}
+.form-group i{
+    color: #228b22;
+    
+
+}
+
+.btn-procura{
+    background-color: #228b22;
+    color: white;
+    margin: 5px;
+    float: left;
+  
+}
+.formulario button:hover{
+    background-color: #1d741d;
+    color: white;
+    
+    
+  
+}
+.form-individual-filtro{
+    float: left;
+    margin: 10px;
+}
+.formulario select{
+   
+    width: 200px;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-top: 10px;
+}
+.carousel-caption{
+    top: 25%;
+    height: auto;
+    
+
+}
+.carousel-item{
+    height: 600px;
+}
+.venda-cep{
+    background-color: #228b22;
+}
+.formulario-cep{
+    background-color:#228b22;
+    padding: 5px;
+    height: auto;
+}
+
+.btn-envia-cep{
+    
+    margin: 10px;
+    border: white solid 3px;
+    background: transparent;
+    color: white;
+    width: 100px;
+    height: 40px;
+    
+}
+.formulario-cep button:hover{
+    border: white solid 3px;
+    background: white;
+    color: rgb(85, 85, 85);
+    width: 100px;
+    height: 40px;
+}
+.form-group-cep{
+    height: auto;
+    color: rgb(255, 255, 255);
+    
+    
+    
+}
+.formulario-cep input{
+    width: 200px;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #575757;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-top: 10px;
+   
+    
+    
+    
+}
+.teste{
+    background-color: #228b22;
+}
+.input-formulario-cep{
+    float: left;
+    
+}
+.voltar-ao-topo {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: #228b22;
+    font-size: 12px;
+    padding: 1em;
+    display: none; 
+    border: 1px solid green;   
+}
+.voltar-ao-topo :hover {
+    background-color: #186b18;
+   
+}
