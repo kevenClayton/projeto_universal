@@ -82,7 +82,7 @@ ul{
 }
 .contato-rodape{
     width: 300px;
-    margin-top: 100px;
+    margin-top: 50px;
     float: left;
     
     
@@ -100,7 +100,7 @@ ul{
 }
 .mapa-site-rodape{
     width: 300px;
-    margin-top: 100px; 
+    margin-top: 50px; 
     float: left;
     
 }
@@ -120,7 +120,7 @@ ul{
 .form-contato-rodape{
     width: 300px;
     float: left;
-    margin-top: 50px;
+    margin-top: 20px;
     background-color: rgb(22, 22, 22);
     padding: 15px;
     margin-bottom: 15px;
@@ -183,11 +183,15 @@ ul{
     background-color:rgba(26, 26, 26, 0.5);
     padding: 5px;
     height: auto;
+    border-radius: 0.25rem;
+    
+    
 }
 .form-group select{
     height: 40px;
     width: 200px;
     margin: 3px;
+
     
   
     
@@ -195,19 +199,21 @@ ul{
 .form-group i{
     color: #228b22;
     
+    
 
 }
 
 .btn-procura{
     background-color: #228b22;
     color: white;
-    margin: 5px;
+    margin: 8px;
     float: left;
+    margin-bottom: 20px;
   
 }
 
 .form-filtro button:hover{
-    background-color: #1d741d;
+    background-color: #155215;
     color: white;
     
     
@@ -215,13 +221,14 @@ ul{
 }
 .form-individual-filtro{
     float: left;
-    margin: 10px;
+    margin: 5px;
+    
 }
 .form-filtro select{
    
     width: 200px;
     height: calc(2.25rem + 2px);
-    padding: 0.375rem 0.75rem;
+    padding-left: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
@@ -245,7 +252,9 @@ ul{
 
 .venda-cep{
     background-color: #228b22;
+    
 }
+
 .formulario-cep{
     background-color:#228b22;
     padding: 5px;
