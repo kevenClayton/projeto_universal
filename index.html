@@ -26,6 +26,7 @@
     <script src="js/node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="js/node_modules/jquery/dist/jquery.js"></script>
     <script src="js/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/cep.js"></script>   
    
     
     <!--Script interno - voltar ao topo -->
@@ -45,25 +46,37 @@
             })
         });
     </script>
-    <script type="text/javascript">
-    $("#cep").blur(function(){
-				var cep = this.value.replace(/[^0-9]/, "");
-				if(cep.length != 8){
-					return false;
-				}
-               
-               
-                $.getJSON(url, function(dadosRetorno){
-					try{
-						$("#endereco").val(dadosRetorno.logradouro);
-						$("#bairro").val(dadosRetorno.bairro);
-						$("#cidade").val(dadosRetorno.localidade);
-						$("#uf").val(dadosRetorno.uf);
-					}catch(ex){}
-				});
-            });
-           
+    <script>
+        $(document).ready(function(){
+	$("#txtCep").focusout(function(){
+		var cep = $("#txtCep").val();
+		cep = cep.replace("-", "");
+		var urlStr = "https://viacep.com.br/ws/"+ cep +"/json/";
+		
+		$.ajax({
+			url : urlStr,
+			type = "get",
+			dataType : "json",
+			success : function(data){
+				console.log(data);
+
+
+			$("#txtCidade").val(data.localidade);
+			$("#txtEstado").val(data.uf);
+			$("#txtBairro").val(data.bairro);
+			$("#txtRua").val(data.logradouro);
+			$("#txtComplemento").val(data.complemento);
+		},
+		error: function(erro){
+			console.log(erro);
+		}
+		});
+	});
+});
+
+	
     </script>
+
 
 
 </head>
@@ -135,7 +148,7 @@
                             <div class="banner-content">
                         <div class="container">
                             <div class="row">
-                            <div class="formulario col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-filtro col-lg-12  col-md-12 col-sm-12 col-xs-12">
                                 <form>
                                     <div class="form-group">
                                           <div class="form-individual-filtro">
@@ -164,7 +177,7 @@
                                         </div>
                                         <div class="form-individual-filtro">
                                             <i class="fa fa-map-marker"></i> <select class="cidade" id="cidade">
-                                                    <option>Todas as cidade</option>
+                                                    <option>Todas as cidades</option>
                                                     <option>Belo Horizonte</option>
                                                     <option>Contagem</option>
                                                     <option>Betim</option>
@@ -263,23 +276,22 @@
                             <div class="form-group-cep ">
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
                                     <label for="exampleFormControlInput1">CEP:</label>
-                                    <input type="text" id="cep" maxlength="9" placeholder="13483-000" autofocus>
-                                </div>   
+                                    <input type="text" id="#txtCep"maxlength="9" placeholder="13483-000" autofocus> </div>   
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">    
                                     <label for="exampleFormControlInput2">Rua:</label>
-                                    <input  type="text" placeholder="Nome da Rua" id="endereco">
+                                    <input  type="text" placeholder="Nome da Rua" id="txtRua">
                                 </div>
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
                                     <label for="exampleFormControlInput3">Bairro:</label>
-                                    <input type="text" placeholder="Nome do bairro" id="bairro">
+                                    <input type="text" placeholder="Nome do bairro" id="txtBairro">
                                 </div>
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
                                     <label for="exampleFormControlInput4">Cidade: </label>
-                                    <input  type="text" placeholder="Nome da Cidade" id="cidade">
+                                    <input  type="text" placeholder="Nome da Cidade" id="txtCidade">
                                 </div>
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">
                                     <label for="exampleFormControlInput5">Estado:</label>
-                                    <input  type="text" placeholder="UF" id="uf">
+                                    <input  type="text" placeholder="UF" id="txtEstado">
                                 </div>
                                 <div class="input-formulario-cep col-lg-4  col-md-4 col-sm-4 col-xs-12">  
                                     <label for="exampleFormControlInput5">Contato:</label>

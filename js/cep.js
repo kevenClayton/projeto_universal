@@ -1,22 +1,28 @@
 $(document).ready(function(){
-	$("input[name=cep]").blur(function(){
-		var cep = $(this).val().replace(/[^0-9]/, '');
-		if(cep){
-			var url = 'https://correiosapi.apphb.com/cep/' + cep;
-			$.ajax({
-                    url: url,
-                    dataType: 'jsonp',
-                    crossDomain: true,
-                    contentType: "application/json",
-					success : function(json){
-						if(json.logradouro){
-							$("input[name=rua]").val(json.logradouro);
-							$("input[name=bairro]").val(json.bairro);
-							$("input[name=cidade]").val(json.cidade);
-							$("input[name=uf]").val(json.estado);
-						}
-					}
-			});
-		}					
-	});	
+	$("#txtCep").focusout(function(){
+		var cep = $("#txtCep").val();
+		cep = cep.replace("-", "");
+		var urlStr = "https://viacep.com.br/ws/"+ cep +"/json/";
+		
+		$.ajax({
+			url : urlStr,
+			type = "get",
+			dataType : "json",
+			success : function(data){
+				console.log(data);
+
+
+			$("#txtCidade").val(data.localidade);
+			$("#txtEstado").val(data.uf);
+			$("#txtBairro").val(data.bairro);
+			$("#txtRua").val(data.logradouro);
+			$("#txtComplemento").val(data.complemento);
+		},
+		error: function(erro){
+			console.log(erro);
+		}
+		});
+	});
 });
+
+	
