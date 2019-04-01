@@ -125,9 +125,7 @@ ul{
     padding: 15px;
     margin-bottom: 15px;
 }
-.form-group{
-    padding: 10px;
-}
+
 .form-contato-rodape span{
     padding-top: 12px;
     margin-top: 20px;
@@ -139,6 +137,10 @@ ul{
     margin-top: 10px;
 
  
+}
+.form-group-contato{
+    padding: 5px;
+    margin-bottom: 10px;
 }
 .form-contato-rodape button:hover{
     background-color: #186418;
@@ -181,9 +183,6 @@ ul{
     background-color:rgba(26, 26, 26, 0.5);
     padding: 5px;
     height: auto;
-
-    
-    
 }
 .form-group select{
     height: 40px;
@@ -206,6 +205,7 @@ ul{
     float: left;
   
 }
+
 .form-filtro button:hover{
     background-color: #1d741d;
     color: white;
@@ -241,6 +241,8 @@ ul{
 .carousel-item{
     height: 600px;
 }
+
+
 .venda-cep{
     background-color: #228b22;
 }
