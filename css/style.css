@@ -339,16 +339,12 @@ ul{
     border-radius: 5px;
      
 }
-.voltar-ao-topo i, a:hover {
-    color: rgb(145, 145, 145);
+.voltar-ao-topo i {
+    color: green;
     text-decoration: none;
 
    
 }
-.voltar-ao-topo a, a:hover {
-    color: white;
-    text-decoration: none;
+.voltar-ao-topo  a:hover{
     background-color: green;
-    
-   
 }
