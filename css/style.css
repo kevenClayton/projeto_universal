@@ -63,8 +63,8 @@ ul{
 }
 .nav-menu  li a:active{
     color: #228b22;
-    text-decoration: none; 
-    
+    border-top: solid 5px #228b22;
+    padding-top: 26px;
 }
 
 
@@ -249,6 +249,7 @@ ul{
 }
 .carousel-item{
     height: 600px;
+    
 }
 
 
