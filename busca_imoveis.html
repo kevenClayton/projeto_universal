@@ -120,7 +120,7 @@
                                             <a href="index.html" class="active">Home <span class="sr-only">(Página atual)</span></a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a  href="busca_imoveis.html">Buscar Imóveis<span class="sr-only">(Página atual)</span> </a>
+                                            <a  href="#">Buscar Imóveis<span class="sr-only">(Página atual)</span> </a>
                                         </li>
                                         <li class="nav-item ">
                                                 <a  href="#">Anuncie seu Imóvel<span class="sr-only">(Página atual)</span> </a>
@@ -141,65 +141,17 @@
     <div class="banner">
         <div id="carouselExampleSlidesOnly" class="carousel " data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active img-fundo-form">
-                        <img class="d-block h-100 w-100  d-inline-block  img-responsive" src="imgs/imagem1.jpg" >
+                    <div class=" active img-busca-fundo">
+                        <img class="d-block  w-100  d-inline-block  img-responsive" src="imgs/imagem1.jpg" >
                     </div>
-                    <div class="carousel-caption  ">
+                    <div class="carousel-caption ">
                             <div class="banner-content">
                         <div class="container">
                             <div class="row">
-                            <div class="form-filtro col-lg-12  col-md-12 col-sm-12 col-xs-12">
-                                <form>
-                                    <div class="form-group">
-                                          <div class="form-individual-filtro">
-                                          <i class="fa fa-check"> </i><select class="compra  bg-light" id="compra-venda" >
-                                                    <option>Comprar ou Alugar</option>
-                                                    <option>Comprar</option>
-                                                    <option>Alugar</option>
-                                                    
-                                            </select>
-                                        </div>
-                                        <div class="form-individual-filtro">
-                                            <i class="fa fa-building"></i> <select class="building" id="tipo">
-                                                    <option>Casa ou Apartamento</option>
-                                                    <option>Apartamento</option>
-                                                    <option>Casa</option>
-                                            </select>
-                                        </div>            
-                                        <div class="form-individual-filtro ">
-                                            <i class="fa fa-bed"></i> <select class="qtde-quartos" id="qtde-quartos">
-                                                    <option>Quantidade Quartos</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3 ou mais quartos</option>
-                                                    
-                                            </select>
-                                        </div>
-                                        <div class="form-individual-filtro ">
-                                            <i class="fa fa-map-marker"></i> <select class="cidade" id="cidade">
-                                                    <option>Todas as cidades</option>
-                                                    <option>Belo Horizonte</option>
-                                                    <option>Contagem</option>
-                                                    <option>Betim</option>
-                                                    <option>Ibirté</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-individual-filtro">
-                                            <i class="fa fa-map-pin"></i><select class="bairro" id="bairro">
-                                                    <option>Todos os bairros</option>
-                                                    <option>Lourdes</option>
-                                                    <option>Savassi</option>
-                                                    <option>Outros</option>
-                                                    
-                                            </select>
-                                            
-                                        </div>
-                                     </div>
-                                </form>
+                            <div class="caption-busca-imoveis col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                                 BUSCAR IMÒVEIS
                                 
-                                <div class="form-individual-filtro col-lg-2  col-md-2 col-sm-12 col-xs-12">
-                                <button class="btn btn-procura" type="button" id="botao-procurar">Procurar</button>
-                                 </div>
+                            
                             </div>
                             </div>
                         </div>   
@@ -211,62 +163,7 @@
             
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="itens-venda col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-                <h1 class="col-lg-12  col-md-12 col-sm-12 col-xs-12"style="text-align: center;" >Exclusividades em Destaques</h1>
-                <div class="card col-lg-3  col-md-3 col-sm-6 col-xs-12" style="width: 18rem;">
-                <img class="card-img-top" src="imgs/imagem1.jpg" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <a href="#prado">Prado - BELO HORIZONTE</a><br/>
-                        <span class="texto-localização">
-                            <i class="fa fa-map-marker"></i> Rua Selênio 32043-720
-                        </span>
-                            <hr>
-                        <span class="itens-contidos">
-                            <i class="fa fa-arrows"></i> 60,00 m²
-                            <i class="fa fa-bed"></i> 2
-                            <i class="fa fa-bath"></i> 1
-                            <i class="fa fa-automobile"></i> 1
-                        </span>
-                    </div>
-                </div>
-                <div class="card col-lg-3  col-md-3 col-sm-6 col-xs-12" style="width: 18rem;">
-                        <img class="card-img-top" src="imgs/imagem1.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <a href="#prado">Lourdes - BELO HORIZONTE</a><br/>
-                                <span class="texto-localização">
-                                    <i class="fa fa-map-marker"></i> Rua Guajajaras 32043-720
-                                </span>
-                                    <hr>
-                                <span class="itens-contidos">
-                                    <i class="fa fa-arrows"></i> 82,00 m²
-                                    <i class="fa fa-bed"></i> 3
-                                    <i class="fa fa-bath"></i> 1
-                                    <i class="fa fa-automobile"></i> 1
-                                </span>
-                            </div>
-                </div>
-                <div class="card col-lg-3  col-md-3 col-sm-6 col-xs-12" style="width: 18rem;">
-                        <img class="card-img-top" src="imgs/imagem1.jpg" alt="Imagem de capa do card">
-                            <div class="card-body">
-                                <a href="#prado">Savassi - BELO HORIZONTE</a><br/>
-                                <span class="texto-localização">
-                                    <i class="fa fa-map-marker"></i> Av. Contorno  32043-720
-                                </span>
-                                    <hr>
-                                <span class="itens-contidos">
-                                    <i class="fa fa-arrows"></i> 45,00 m²
-                                    <i class="fa fa-bed"></i> 1
-                                    <i class="fa fa-bath"></i> 1
-                                    <i class="fa fa-automobile"></i> 1
-                                </span>
-                            </div>
-                </div>
-              
-            </div>
-        </div>
-    </div>
+    
 
     
 

@@ -61,6 +61,11 @@ ul{
     
     
 }
+.nav-menu a:focus{
+    color: #228b22;
+    border-top: solid 5px #228b22;
+    padding-top: 26px;
+}
 .nav-menu  li a:active{
     color: #228b22;
     border-top: solid 5px #228b22;
@@ -72,6 +77,9 @@ ul{
     height: 380px;
     width: 100%;
     
+}
+.caption-busca-imoveis{
+    font-size: 40px;
 }
 .rodape{
     background-color: rgb(20, 20, 20);
@@ -246,11 +254,15 @@ ul{
     
 
 }
+
+.img-busca-fundo{
+    height: 300px;
+    
+
+}
 .carousel-item{
     height: 600px;
-    
 }
-
 
 .venda-cep{
     background-color: #228b22;
@@ -317,14 +329,26 @@ ul{
     bottom: 2em;
     right: 2em;
     text-decoration: none;
-    color: white;
-    background-color: #228b22;
+    color: rgb(196, 196, 196);
+    background-color: transparent;
     font-size: 12px;
     padding: 1em;
     display: none; 
-    border: 1px solid green;   
+    border: 1px solid green;  
+    width: 35px;
+    border-radius: 5px;
+     
 }
-.voltar-ao-topo :hover {
-    background-color: #186b18;
+.voltar-ao-topo i, a:hover {
+    color: rgb(145, 145, 145);
+    text-decoration: none;
+
+   
+}
+.voltar-ao-topo a, a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    
    
 }
